@@ -67,8 +67,12 @@ BOARD_AVB_VBMETA_SYSTEM_ALGORITHM ?= SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
-TARGET_NO_RECOVERY := true
-BOARD_USES_RECOVERY_AS_BOOT := true
+# This target has recovery partitions and bootloader
+# will not set the skip_initramfs cmdline bootparam,
+# so if we turn on recovery as boot, we always end up
+# booting to recovery. Nice!
+TARGET_NO_RECOVERY := false
+BOARD_USES_RECOVERY_AS_BOOT := false
 
 # DTBO partition definitions
 TARGET_NEEDS_DTBOIMAGE ?= true
