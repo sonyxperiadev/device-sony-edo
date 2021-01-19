@@ -20,7 +20,7 @@ SOMC_KERNEL_VERSION := 4.19
 
 PRODUCT_PLATFORM_SOD := true
 
-TARGET_BOARD_PLATFORM := sm8150
+TARGET_BOARD_PLATFORM := kona
 
 SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
 
@@ -115,8 +115,8 @@ PRODUCT_PACKAGES += \
     update_engine_client \
     update_engine_sideload \
     update_verifier \
-    bootctrl.sm8150 \
-    bootctrl.sm8150.recovery
+    bootctrl.kona \
+    bootctrl.kona.recovery
 
 AB_OTA_PARTITIONS += \
     boot \
@@ -214,19 +214,19 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    sound_trigger.primary.sm8150 \
-    audio.primary.sm8150
+    sound_trigger.primary.kona \
+    audio.primary.kona
 
 # GFX
 PRODUCT_PACKAGES += \
-    copybit.sm8150 \
-    gralloc.sm8150 \
-    hwcomposer.sm8150 \
-    memtrack.sm8150
+    copybit.kona \
+    gralloc.kona \
+    hwcomposer.kona \
+    memtrack.kona
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.sm8150
+    gps.kona
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -308,7 +308,7 @@ PRODUCT_PACKAGES += \
 TARGET_USES_64BIT_CAMERA := true
 
 PRODUCT_PACKAGES += \
-    camera.sm8150
+    camera.kona
 
 # Look for camera.qcom.so instead of camera.$(BOARD_TARGET_PLATFORM).so
 PRODUCT_PROPERTY_OVERRIDES += \
