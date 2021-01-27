@@ -133,6 +133,10 @@ AB_OTA_PARTITIONS += \
     vbmeta \
     vbmeta_system
 
+# Dynamic Partitions: build fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Treble
 # Include vndk/vndk-sp/ll-ndk modules
 PRODUCT_PACKAGES += \
