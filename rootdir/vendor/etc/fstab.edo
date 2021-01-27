@@ -24,6 +24,6 @@ vendor                                     /vendor                 ext4    ro,ba
 /dev/block/zram0                           none                    swap    defaults                                                              zramsize=1073741824,max_comp_streams=8
 
 # External Devices
-/devices/platform/soc/8804000.sdhci/mmc_host/mmc*                       auto         auto    nosuid,nodev                                        voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/platform/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb*   auto         auto    defaults                                            voldmanaged=usb:auto
+/devices/platform/soc/8804000.sdhci/mmc_host/mmc*     auto         auto    nosuid,nodev                                                          voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*   auto       auto    defaults                                                              voldmanaged=usb:auto
 
