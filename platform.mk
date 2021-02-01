@@ -121,8 +121,8 @@ PRODUCT_PACKAGES += \
     update_engine_client \
     update_engine_sideload \
     update_verifier \
-    bootctrl.sm8150 \
-    bootctrl.sm8150.recovery
+    bootctrl.sm8250 \
+    bootctrl.sm8250.recovery
 
 AB_OTA_PARTITIONS += \
     boot \
@@ -227,19 +227,19 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    sound_trigger.primary.sm8150 \
-    audio.primary.sm8150
+    sound_trigger.primary.sm8250 \
+    audio.primary.sm8250
 
 # GFX
 PRODUCT_PACKAGES += \
-    copybit.sm8150 \
-    gralloc.sm8150 \
-    hwcomposer.sm8150 \
-    memtrack.sm8150
+    copybit.sm8250 \
+    gralloc.sm8250 \
+    hwcomposer.sm8250 \
+    memtrack.sm8250
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.sm8150
+    gps.sm8250
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -321,7 +321,7 @@ PRODUCT_PACKAGES += \
 TARGET_USES_64BIT_CAMERA := true
 
 PRODUCT_PACKAGES += \
-    camera.sm8150
+    camera.sm8250
 
 # Look for camera.qcom.so instead of camera.$(BOARD_TARGET_PLATFORM).so
 PRODUCT_PROPERTY_OVERRIDES += \
