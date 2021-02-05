@@ -1,9 +1,11 @@
+Edo platform
+============
 Copyright (C) Sony Mobile Communications 2019
-=============================================
+---------------------------------------------
 
-This is the Android device configuration for edo platform (**SM8250**).
+Android device configuration for the edo platform (**SM8250**).
 
-### Supported devices:
+### Supported devices
 
 | Device | Codename |
 |-|:-:|
