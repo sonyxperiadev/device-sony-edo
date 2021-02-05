@@ -60,6 +60,10 @@ on property:sys.boot_completed=1
 
     # Disable thermal
     write /sys/module/msm_thermal/core_control/enabled 0
+    
+    # CPUSET params
+    write /dev/cpuset/background/cpus "0-3"
+    write /dev/cpuset/system-background/cpus "0-3"
 
     # configure governor settings for silver cluster
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
@@ -99,13 +103,28 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu5/online 1
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
+    
+    # QC corectl
+    write /sys/devices/system/cpu/cpu0/core_ctl/enable 0
+    
+    write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 2
+    write /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres 60
+    write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 30
+    write /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms 100
+    write /sys/devices/system/cpu/cpu4/core_ctl/task_thres 2
+
+    write /sys/devices/system/cpu/cpu7/core_ctl/min_cpus 0
+    write /sys/devices/system/cpu/cpu7/core_ctl/busy_up_thres 60
+    write /sys/devices/system/cpu/cpu7/core_ctl/busy_down_thres 30
+    write /sys/devices/system/cpu/cpu7/core_ctl/offline_delay_ms 100
+    write /sys/devices/system/cpu/cpu7/core_ctl/task_thres 1
 
     # Enable bus-dcvs
     write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/governor bw_hwmon
     write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/polling_interval 40
-    write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/mbps_zones "4577 7110 9155 12298 14236 15258"
+    write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/mbps_zones "1720 2086 2929 3879 5161 5931 6881 7980"
     write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/sample_ms 4
-    write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/io_percent 50
+    write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/io_percent 80
     write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/hist_memory 20
     write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/hyst_length 10
     write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/down_thres 30
@@ -115,7 +134,7 @@ on property:sys.boot_completed=1
 
     write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/soc:qcom,cpu-llcc-ddr-bw/governor bw_hwmon
     write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/soc:qcom,cpu-llcc-ddr-bw/polling_interval 40
-    write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/mbps_zones "1720 2929 3879 5931 6881 7980"
+    write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/mbps_zones "1720 2086 2929 3879 5931 6881 7980 10437"
     write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/sample_ms 4
     write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/io_percent 80
     write /sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/hist_memory 20
@@ -128,7 +147,7 @@ on property:sys.boot_completed=1
     write /sys/devices/virtual/npu/msm_npu/pwr 1
     write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/governor bw_hwmon
     write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/polling_interval 40
-    write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/bw_hwmon/mbps_zones "1720 2929 3879 5931 6881 7980"
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/bw_hwmon/mbps_zones "1720 2086 2929 3879 5931 6881 7980 10437"
     write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/bw_hwmon/sample_ms 4
     write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/bw_hwmon/io_percent 80
     write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/bw_hwmon/hist_memory 20
@@ -136,7 +155,19 @@ on property:sys.boot_completed=1
     write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/bw_hwmon/down_thres 30
     write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/bw_hwmon/guard_band_mbps 0
     write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/bw_hwmon/up_scale 250
-    write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/bw_hwmon/idle_mbps 0
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw/bw_hwmon/idle_mbps 1600
+
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq/soc:qcom,npu-npu-llcc-bw/governor bw_hwmon
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq/soc:qcom,npu-npu-llcc-bw/polling_interval 40
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq/soc:qcom,npu-npu-llcc-bw/bw_hwmon/mbps_zones "1720 2086 2929 3879 5931 6881 7980 10437"
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq/soc:qcom,npu-npu-llcc-bw/bw_hwmon/sample_ms 4
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq/soc:qcom,npu-npu-llcc-bw/bw_hwmon/io_percent 80
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq/soc:qcom,npu-npu-llcc-bw/bw_hwmon/hist_memory 20
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq/soc:qcom,npu-npu-llcc-bw/bw_hwmon/hyst_length 6
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq/soc:qcom,npu-npu-llcc-bw/bw_hwmon/down_thres 30
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq/soc:qcom,npu-npu-llcc-bw/bw_hwmon/guard_band_mbps 0
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq/soc:qcom,npu-npu-llcc-bw/bw_hwmon/up_scale 250
+    write /sys/devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq/soc:qcom,npu-npu-llcc-bw/bw_hwmon/idle_mbps 1600
     write /sys/devices/virtual/npu/msm_npu/pwr 0
 
     #Enable mem_latency governor for L3, LLCC, and DDR scaling
