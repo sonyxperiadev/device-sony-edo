@@ -9,7 +9,7 @@ vendor                                     /vendor                 ext4    ro,ba
 
 # Real first stage mount partitions
 /dev/block/by-name/metadata                /metadata               ext4    noatime,nosuid,nodev,discard                                          wait,formattable,first_stage_mount
-/dev/block/bootdevice/by-name/oem_a        /odm                    ext4    ro,barrier=1                                                          wait,first_stage_mount
+/dev/block/by-name/oem_a                   /odm                    ext4    ro,barrier=1                                                          wait,first_stage_mount
 
 # Other Partitions
 /dev/block/bootdevice/by-name/userdata     /data                   ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard,errors=panic,inlinecrypt   latemount,wait,check,formattable,fileencryption=ice,keydirectory=/metadata/vold/metadata_encryption,quota,reservedsize=128M
