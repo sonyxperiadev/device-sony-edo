@@ -20,6 +20,10 @@ vendor                                     /vendor                 ext4    ro,ba
 /dev/block/bootdevice/by-name/bluetooth    /vendor/bt_firmware     vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:vendor_firmware_file:s0 wait,slotselect
 /dev/block/bootdevice/by-name/persist      /mnt/vendor/persist     ext4    noatime,nosuid,nodev,barrier=1,data=ordered,nodelalloc,errors=panic   wait,notrim
 
+# External modem
+/dev/block/bootdevice/by-name/mdm1m9kefs1  /modem_fs1              emmc    defaults                                                              defaults
+/dev/block/bootdevice/by-name/mdm1m9kefs2  /modem_fs2              emmc    defaults                                                              defaults
+
 #ZRAM/SWAP
 /dev/block/zram0                           none                    swap    defaults                                                              zramsize=1073741824,max_comp_streams=8
 
