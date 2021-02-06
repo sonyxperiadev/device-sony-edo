@@ -336,7 +336,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service-qti
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=cherokee
+    vendor.qcom.bluetooth.soc=hastings
 
 # Audio - Android System
 PRODUCT_PROPERTY_OVERRIDES += \
