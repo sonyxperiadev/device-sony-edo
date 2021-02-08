@@ -231,7 +231,8 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     sound_trigger.primary.sm8250 \
-    audio.primary.sm8250
+    audio.primary.sm8250 \
+    libcirrusspkrprot
 
 # GFX
 PRODUCT_PACKAGES += \
@@ -356,6 +357,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Audio - QCOM proprietary
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.adm.buffering.ms=3
+
+# Audio - Sony specific
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.dynamic_ecns.enable=true \
+    vendor.audio.enable.cirrus.speaker=true
 
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
