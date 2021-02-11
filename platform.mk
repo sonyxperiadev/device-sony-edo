@@ -356,7 +356,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio - QCOM proprietary
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.audio.adm.buffering.ms=3
+    vendor.audio.adm.buffering.ms=2
 
 # Audio - Sony specific
 PRODUCT_PROPERTY_OVERRIDES += \
