@@ -190,3 +190,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/module/msm_performance/parameters cpu_max_freq   0664 system system
 /sys/module/msm_performance/parameters cpu_min_freq   0664 system system
 /sys/module/msm_performance/parameters max_cpus       0664 system system
+
+# Ultrasound device
+/dev/usf1                 0660   system     system
