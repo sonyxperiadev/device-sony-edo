@@ -18,8 +18,8 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/ipaNatTable          0660   net_admin  net_admin
 /dev/rmnet_ctrl           0660   usb        usb
 /dev/dpl_ctrl             0660   usb        usb
-/dev/ipa_odl_ctl          0660   radio      radio
-/dev/ipa_adpl             0660   radio      radio
+/dev/ipa_odl_ctl          0660   system     radio
+/dev/ipa_adpl             0660   system     radio
 
 # the DIAG device node is not world writable/readable.
 /dev/diag                 0660   system     diag
@@ -54,10 +54,11 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/smdcnt_rev8          0640   radio      radio
 /dev/smuxctl32            0640   radio      radio
 /dev/rmnet_mux_ctrl       0640   radio      radio
-/dev/mhi_pipe_14          0640   radio      radio
-/dev/mhi_pipe_16          0640   radio      radio
-/dev/mhi_pipe_32          0640   radio      radio
+/dev/mhi_*_pipe_14        0640   radio      radio
+/dev/mhi_*_pipe_16        0640   radio      radio
+/dev/mhi_*_pipe_32        0640   radio      radio
 /dev/at_usb0              0640   radio      radio
+/dev/at_usb1              0640   radio      radio
 /dev/at_mdm0              0640   radio      radio
 /dev/cvp*                 0660   system     camera
 /dev/video*               0660   system     camera
@@ -185,6 +186,10 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # Framebuffer for Dynamic Resolution Switch
 /sys/devices/virtual/graphics/fb0 mode        0664 system graphics
+
+# QDSS
+/dev/mhi_qdss                              0660   system   system
+/sys/class/qdss_bridge/mhi_qdss  mode      0660   system   system
 
 # Thermanager
 /sys/module/msm_performance/parameters cpu_max_freq   0664 system system
