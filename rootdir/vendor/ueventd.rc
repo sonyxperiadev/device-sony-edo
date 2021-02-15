@@ -177,6 +177,9 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/class/backlight/panel0-backlight max_brightness 0644 root system
 /sys/class/backlight/panel0-backlight brightness     0664 system system
 
+# NPU device
+/dev/msm_npu             0644   system     system
+
 # Fingerprint sensor  device
 /dev/fingerprint         0664 system input
 
