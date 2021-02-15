@@ -326,7 +326,6 @@ PRODUCT_PACKAGES += \
     kona_qrd_tmd2725_0.json \
     kona_shtw2_0.json \
     kona_somc_default_sensors.json \
-    kona_stk3x3x_0.json \
     kona_svr_bma4_0.json \
     kona_svr_bmg160_0.json \
     kona_svr_icm4x6xx_0.json \
@@ -344,6 +343,7 @@ PRODUCT_PACKAGES += \
     sns_heart_rate.json \
     sns_mag_cal_legacy.json \
     sns_wrist_pedo.json \
+    stk3x3x_0.json \
     wigig_sensing_0.json
 
 # CAMERA
