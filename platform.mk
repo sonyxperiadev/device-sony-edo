@@ -303,26 +303,49 @@ PRODUCT_PACKAGES += \
 
 # Platform SSC Sensors
 PRODUCT_PACKAGES += \
-    msmnile_ak991x_0.json \
-    msmnile_bme680_0.json \
-    msmnile_bmp380_0.json \
-    msmnile_bu52053nvx_0.json \
-    msmnile_cm3526_0.json \
-    msmnile_dps368_0.json \
-    msmnile_hdk_ak991x_0.json \
-    msmnile_hdk_lsm6dso_0.json \
-    msmnile_hdk_tmd2725.json \
-    msmnile_irq.json \
-    msmnile_lsm6dsm_0.json \
-    msmnile_lsm6dso_0.json \
-    msmnile_power_0.json \
-    msmnile_qrd_2_lsm6dso_0.json \
-    msmnile_qrd_ak991x_0.json \
-    msmnile_qrd_lsm6dso_0.json \
-    msmnile_qrd_tmd2725.json \
-    msmnile_shtw2_0.json \
-    msmnile_tmd2725.json \
-    msmnile_tmd3725.json
+    kona_ak991x_0.json \
+    kona_ak991x_0_somc_platform.json \
+    kona_ak991x_0_somc_product.json \
+    kona_amd_sw_disabled.json \
+    kona_bmp380_0.json \
+    kona_bu52053nvx_0.json \
+    kona_default_sensors.json \
+    kona_dynamic_sensors.json \
+    kona_hdk_ak991x_0.json \
+    kona_hdk_lsm6dst_0.json \
+    kona_hdk_lsm6dst_1.json \
+    kona_irq.json \
+    kona_lps22hh_0.json \
+    kona_lsm6dsm_0.json \
+    kona_lsm6dsm_0_somc_product.json \
+    kona_lsm6dst_0.json \
+    kona_lsm6dst_1.json \
+    kona_power_0.json \
+    kona_qrd_ak991x_0.json \
+    kona_qrd_lsm6dst_0.json \
+    kona_qrd_sx932x_0.json \
+    kona_qrd_tmd2725_0.json \
+    kona_shtw2_0.json \
+    kona_somc_default_sensors.json \
+    kona_stk3x3x_0.json \
+    kona_svr_bma4_0.json \
+    kona_svr_bmg160_0.json \
+    kona_svr_icm4x6xx_0.json \
+    kona_svr_rpr0521rs_0.json \
+    kona_sx932x_0.json \
+    kona_tmd2725_0.json
+
+# Other edo-specific sensors
+PRODUCT_PACKAGES += \
+    sns_ccd_v2_walk.json \
+    sns_ccd_v3_1_walk.json \
+    sns_ccd_v3_walk.json \
+    sns_device_orient_somc_platform.json \
+    sns_fmv_legacy.json \
+    sns_heart_rate.json \
+    sns_mag_cal_legacy.json \
+    sns_wrist_pedo.json \
+    wigig_sensing_0.json
 
 # CAMERA
 TARGET_USES_64BIT_CAMERA := true
