@@ -303,7 +303,6 @@ PRODUCT_PACKAGES += \
     kona_ak991x_0.json \
     kona_ak991x_0_somc_platform.json \
     kona_ak991x_0_somc_product.json \
-    kona_amd_sw_disabled.json \
     kona_bmp380_0.json \
     kona_bu52053nvx_0.json \
     kona_default_sensors.json \
