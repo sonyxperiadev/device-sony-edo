@@ -375,15 +375,34 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.comp_mask=0 \
+    vendor.display.disable_excl_rect=0 \
+    vendor.display.disable_excl_rect_partial_fb=1 \
+    vendor.display.disable_hw_recovery_dump=1 \
+    vendor.display.disable_layer_stitch=0 \
+    vendor.display.disable_rotator_ubwc=1 \
+    vendor.display.disable_scaler=0 \
     vendor.gralloc.disable_ubwc=0 \
-    vendor.display.disable_scaler=0
+    vendor.display.enable_posted_start_dyn=1 \
+    vendor.display.enable_optimize_refresh=1 \
+    vendor.display.camera_noc_efficiency_factor=0.70 \
+    vendor.display.normal_noc_efficiency_factor=0.85 \
+    vendor.display.secure_preview_buffer_format=420_sp \
+    vendor.display.use_smooth_motion=1 \
+    vendor.gralloc.secure_preview_buffer_format=420_sp \
+    debug.sf.enable_advanced_sf_phase_offset=1 \
+    debug.sf.high_fps_late_sf_phase_offset_ns=-5000000 \
+    debug.sf.high_fps_early_phase_offset_ns=-5000000 \
+    debug.sf.high_fps_early_gl_phase_offset_ns=-5000000
 
 # Display - HDR/WCG
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0 \
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.has_HDR_display=true \
     ro.surface_flinger.has_wide_color_display=true \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=2 \
+    ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.set_touch_timer_ms=200 \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.wcg_composition_dataspace=143261696
 
