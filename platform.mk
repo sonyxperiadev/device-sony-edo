@@ -352,6 +352,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio - QCOM HAL
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.concurrent_capture.enable=true \
     vendor.audio.feature.compress_in.enable=true \
     vendor.audio.feature.display_port.enable=true \
     vendor.audio.feature.hdmi_edid.enable=true \
