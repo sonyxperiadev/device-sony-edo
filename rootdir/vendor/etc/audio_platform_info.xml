@@ -153,6 +153,7 @@
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED" acdb_id="15"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED_VBAT" acdb_id="15"/>
 
+        <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="544"/>
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK" acdb_id="102"/>
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_1" acdb_id="151"/>
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_2" acdb_id="152"/>
