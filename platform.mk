@@ -337,7 +337,6 @@ PRODUCT_PACKAGES += \
     sns_ccd_v2_walk.json \
     sns_ccd_v3_1_walk.json \
     sns_ccd_v3_walk.json \
-    sns_device_orient_somc_platform.json \
     sns_fmv_legacy.json \
     sns_heart_rate.json \
     sns_mag_cal_legacy.json \
