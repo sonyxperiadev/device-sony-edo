@@ -12,6 +12,7 @@ genfscon sysfs /devices/platform/soc/abb0000.qcom,cvpss                         
 genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc                           u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,mdm0                              u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/9800000.qcom,npu                           u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6390                 u:object_r:sysfs_msm_subsys:s0
 
 genfscon sysfs /devices/platform/soc/ac4a000.qcom,cci                           u:object_r:sysfs_camera:s0
 genfscon sysfs /devices/platform/soc/ac4b000.qcom,cci                           u:object_r:sysfs_camera:s0
