@@ -110,4 +110,9 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/vbmeta(_system)?_[ab]   u:object_r:vbmeta_block_device:s0
 /dev/block/bootdevice/by-name/vbmeta(_system)?_[ab]                    u:object_r:vbmeta_block_device:s0
 
+/dev/block/platform/soc/1d84000\.ufshc/by-name/mdm1m9kefs[1-3]         u:object_r:efs_boot_device:s0
+/dev/block/bootdevice/by-name/mdm1m9kefs[1-3]                          u:object_r:efs_boot_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/mdmddr                  u:object_r:efs_boot_device:s0
+/dev/block/bootdevice/by-name/mdmddr                                   u:object_r:efs_boot_device:s0
+
 /dev/block/zram0                                               u:object_r:swap_block_device:s0
