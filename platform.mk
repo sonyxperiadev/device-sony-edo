@@ -301,7 +301,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     kona_ak991x_0.json \
     kona_ak991x_0_somc_platform.json \
-    kona_ak991x_0_somc_product.json \
     kona_bmp380_0.json \
     kona_bu52053nvx_0.json \
     kona_default_sensors.json \
@@ -312,7 +311,6 @@ PRODUCT_PACKAGES += \
     kona_irq.json \
     kona_lps22hh_0.json \
     kona_lsm6dsm_0.json \
-    kona_lsm6dsm_0_somc_product.json \
     kona_lsm6dst_0.json \
     kona_lsm6dst_1.json \
     kona_power_0.json \
