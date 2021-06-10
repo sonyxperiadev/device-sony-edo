@@ -300,7 +300,6 @@ PRODUCT_PACKAGES += \
 # Platform SSC Sensors
 PRODUCT_PACKAGES += \
     kona_ak991x_0.json \
-    kona_ak991x_0_somc_platform.json \
     kona_bmp380_0.json \
     kona_bu52053nvx_0.json \
     kona_default_sensors.json \
@@ -339,6 +338,11 @@ PRODUCT_PACKAGES += \
     sns_wrist_pedo.json \
     stk3x3x_0.json \
     wigig_sensing_0.json
+
+# Platform-specific sensor overlays
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/vendor/etc/sensors/config/kona_ak991x_0_somc_platform.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_ak991x_0_somc_platform.json \
+    $(SONY_ROOT)/vendor/etc/sensors/config/sns_device_orient_somc_platform.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_device_orient_somc_platform.json
 
 # CAMERA
 TARGET_USES_64BIT_CAMERA := true
