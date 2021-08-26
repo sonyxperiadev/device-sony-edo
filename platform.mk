@@ -103,6 +103,10 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
 # Lights HAL: Backlight
 TARGET_USES_SDE := true
 
+# Force building a boot image.
+# This needs to be set explicitly since Android R
+PRODUCT_BUILD_BOOT_IMAGE := true
+
 # A/B support
 AB_OTA_UPDATER := true
 PRODUCT_SHIPPING_API_LEVEL := 26
