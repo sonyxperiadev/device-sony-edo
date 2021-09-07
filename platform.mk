@@ -81,9 +81,6 @@ AUDIO_FEATURE_ENABLED_DISPLAY_PORT := true
 AUDIO_FEATURE_ENABLED_USB_BURST_MODE := true
 AUDIO_FEATURE_SONY_CIRRUS := true
 
-# DSP
-TARGET_NEEDS_SDSP_SENSORS_PDR := true
-
 # Dynamic Partitions: Enable DP
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -250,6 +247,10 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     gps.sm8250
+
+# Sensors init
+PRODUCT_PACKAGES += \
+    sdsp-sensorspdr.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
