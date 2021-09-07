@@ -223,6 +223,7 @@ PRODUCT_COPY_FILES += \
 
 # Platform specific init
 PRODUCT_PACKAGES += \
+    tad.rc \
     init.edo \
     init.edo.pwr \
     ueventd
