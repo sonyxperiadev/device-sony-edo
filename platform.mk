@@ -84,9 +84,6 @@ AUDIO_FEATURE_SONY_CIRRUS := true
 # Dynamic Partitions: Enable DP
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Secure Processor
-TARGET_HAS_SPU := true
-
 # Display
 TARGET_HAS_HDR_DISPLAY := true
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
@@ -217,6 +214,10 @@ PRODUCT_COPY_FILES += \
 # CAMX config
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
+
+# SPU vintf
+DEVICE_MANIFEST_FILE += $(PLATFORM_COMMON_PATH)/vintf/vendor.qti.spu.xml
+DEVICE_MANIFEST_FILE += $(PLATFORM_COMMON_PATH)/vintf/android.hardware.authsecret_v1.0.xml
 
 # Platform specific init
 PRODUCT_PACKAGES += \
