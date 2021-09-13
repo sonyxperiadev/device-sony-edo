@@ -226,6 +226,10 @@ PRODUCT_PACKAGES += \
     init.edo.pwr \
     ueventd
 
+# HVDCP init
+PRODUCT_PACKAGES += \
+    hvdcp_opti.rc
+
 # Audio init
 PRODUCT_PACKAGES += \
     audiopd.rc
