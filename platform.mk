@@ -117,9 +117,7 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_client \
     update_engine_sideload \
-    update_verifier \
-    bootctrl.sm8250 \
-    bootctrl.sm8250.recovery
+    update_verifier
 
 AB_OTA_PARTITIONS += \
     boot \
