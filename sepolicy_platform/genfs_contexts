@@ -1,6 +1,10 @@
-genfscon sysfs /devices/platform/soc/890000.i2c                                 u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/89c000.i2c                                 u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/a88000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/884000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/984000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/988000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/98c000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/994000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/a84000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/a94000.i2c                                 u:object_r:sysfs_msm_subsys:s0
 
 genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws                           u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,ipa_uc                            u:object_r:sysfs_msm_subsys:s0
@@ -14,8 +18,8 @@ genfscon sysfs /devices/platform/soc/soc:qcom,mdm0                              
 genfscon sysfs /devices/platform/soc/9800000.qcom,npu                           u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6390                 u:object_r:sysfs_msm_subsys:s0
 
-genfscon sysfs /devices/platform/soc/ac4a000.qcom,cci                           u:object_r:sysfs_camera:s0
-genfscon sysfs /devices/platform/soc/ac4b000.qcom,cci                           u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/platform/soc/ac4f000.qcom,cci                           u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/platform/soc/ac45000.qcom,cci                           u:object_r:sysfs_camera:s0
 
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight                                                        u:object_r:sysfs_leds:s0
 
