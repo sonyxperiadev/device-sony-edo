@@ -230,7 +230,7 @@ DEVICE_MANIFEST_FILE += $(PLATFORM_COMMON_PATH)/vintf/android.hardware.authsecre
 
 # Platform specific init
 PRODUCT_PACKAGES += \
-    tad.rc \
+    tad_legacy.rc \
     init.edo \
     init.edo.pwr \
     ueventd
